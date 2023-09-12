@@ -38,4 +38,4 @@ mobile_applications = 'https://www.fl.ru/rss/all.xml?category=23'
 
 networks_and_information_systems = 'https://www.fl.ru/rss/all.xml?category=24'
 
-#feedparser
+#Feedparser
