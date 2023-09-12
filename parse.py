@@ -25,8 +25,7 @@ def get_data():
     useragent = headers['user-agent']
 
     
-    request_managemend = requests.get(management, headers=headers)
-    print(request_managemend)
+    request_managemend = requests.get(management, headers=headers).text
     time.sleep(1)
     
     request_sites = requests.get(dev_sites, headers=headers).text    
@@ -41,49 +40,49 @@ def get_data():
     request_optimization_seo = requests.get(optimization_and_seo, headers=headers).text
     time.sleep(1)
     
-    request_translates = requests.get(translates, headers=headers)
+    request_translates = requests.get(translates, headers=headers).text
     time.sleep(1)
     
-    request_texts = requests.get(texts, headers=headers)
+    request_texts = requests.get(texts, headers=headers).text
     time.sleep(1)
     
-    request_three_d_graphics = requests.get(three_d_grafics, headers=headers)
+    request_three_d_graphics = requests.get(three_d_grafics, headers=headers).text
     time.sleep(1)
     
-    request_photography = requests.get(photography, headers=headers)
+    request_photography = requests.get(photography, headers=headers).text
     time.sleep(1)
     
-    request_audio_and_video = requests.get(audio_and_video, headers=headers)
+    request_audio_and_video = requests.get(audio_and_video, headers=headers).text
     time.sleep(1)
     
-    request_advertising_and_marketing = requests.get(advertising_and_marketing, headers=headers)
+    request_advertising_and_marketing = requests.get(advertising_and_marketing, headers=headers).text
     time.sleep(1)
     
-    request_outsourcing_and_consalting = requests.get(outsourcing_and_consalting, headers=headers)
+    request_outsourcing_and_consalting = requests.get(outsourcing_and_consalting, headers=headers).text
     time.sleep(1)
     
-    request_architecture_and_interier = requests.get(architecture_and_interier, headers=headers)
+    request_architecture_and_interier = requests.get(architecture_and_interier, headers=headers).text
     time.sleep(1)
     
-    request_gamedev = requests.get(gamedev, headers=headers)
+    request_gamedev = requests.get(gamedev, headers=headers).text
     time.sleep(1)
     
-    request_polygraph = requests.get(polygraph, headers=headers)
+    request_polygraphy = requests.get(polygraphy, headers=headers).text
     time.sleep(1)
     
-    request_animation = requests.get(animation_and_flash, headers=headers)
+    request_animation = requests.get(animation_and_flash, headers=headers).text
     time.sleep(1)
     
-    request_engineering = requests.get(engineering, headers=headers)
+    request_engineering = requests.get(engineering, headers=headers).text
     time.sleep(1)
     
-    request_education = requests.get(education_and_consultations, headers=headers)
+    request_education = requests.get(education_and_consultations, headers=headers).text
     time.sleep(1)
     
-    request_mobile_app = requests.get(mobile_applications, headers=headers)
+    request_mobile_app = requests.get(mobile_applications, headers=headers).text
     time.sleep(1)
     
-    request_networks = requests.get(networks_and_information_systems, headers=headers)
+    request_networks = requests.get(networks_and_information_systems, headers=headers).text
     time.sleep(1)
     
     request_bots = requests.get('https://www.fl.ru/rss/all.xml?subcategory=279&category=5', headers=headers).text
@@ -92,8 +91,7 @@ def get_data():
     request_parsing = requests.get('https://www.fl.ru/rss/all.xml?subcategory=280&category=5', headers=headers).text
     time.sleep(1)
 
-    print(request_translates)
-    print(request_networks)
+
 
     
 
@@ -168,19 +166,71 @@ def get_data():
         with open('pages/fl_audio_video.xml', 'r', encoding="utf-8") as file:
             req_audio_video = file.read()
             categories_xml_list.append(req_audio_video)
-            
+
         with open('pages/fl_advertising_marketing.xml', 'w', encoding="utf-8") as file:
             file.write(request_advertising_and_marketing)
         with open('pages/fl_advertising_marketing.xml', 'r', encoding="utf-8") as file:
             req_marketing = file.read()
             categories_xml_list.append(req_marketing)
-        
-            
-                
- 
-        
-        
-        
+
+        with open('pages/fl_outsourcing.xml', 'w', encoding="utf-8") as file:
+            file.write(request_outsourcing_and_consalting)
+        with open('pages/fl_outsourcing.xml', 'r', encoding="utf-8") as file:
+            req_outsourcing = file.read()
+            categories_xml_list.append(req_outsourcing)
+
+        with open('pages/fl_architecture.xml', 'w', encoding="utf-8") as file:
+            file.write(request_architecture_and_interier)
+        with open('pages/fl_architecture.xml', 'r', encoding="utf-8") as file:
+            req_architecture = file.read()
+            categories_xml_list.append(req_architecture)
+
+        with open('pages/fl_gamedev.xml', 'w', encoding="utf-8") as file:
+            file.write(request_gamedev)
+        with open('pages/fl_gamedev.xml', 'r', encoding="utf-8") as file:
+            req_gamedev = file.read()
+            categories_xml_list.append(req_gamedev)
+
+        with open('pages/fl_polygraphy.xml', 'w', encoding="utf-8") as file:
+            file.write(request_polygraphy)
+        with open('pages/fl_advertising_marketing.xml', 'r', encoding="utf-8") as file:
+            req_polygraphy = file.read()
+            categories_xml_list.append(req_polygraphy)
+
+        with open('pages/fl_animation.xml', 'w', encoding="utf-8") as file:
+            file.write(request_animation)
+        with open('pages/fl_animation.xml', 'r', encoding="utf-8") as file:
+            req_animation = file.read()
+            categories_xml_list.append(req_animation)
+
+        with open('pages/fl_engineering.xml', 'w', encoding="utf-8") as file:
+            file.write(request_engineering)
+        with open('pages/fl_engineering.xml', 'r', encoding="utf-8") as file:
+            req_engineering = file.read()
+            categories_xml_list.append(req_engineering)
+
+        with open('pages/fl_education.xml', 'w', encoding="utf-8") as file:
+            file.write(request_education)
+        with open('pages/fl_education.xml', 'r', encoding="utf-8") as file:
+            req_education = file.read()
+            categories_xml_list.append(req_education)
+
+        with open('pages/fl_mobile_apps.xml', 'w', encoding="utf-8") as file:
+            file.write(request_mobile_app)
+        with open('pages/fl_mobile_apps.xml', 'r', encoding="utf-8") as file:
+            req_mobile_app = file.read()
+            categories_xml_list.append(req_mobile_app)
+
+        with open('pages/fl_networks.xml', 'w', encoding="utf-8") as file:
+            file.write(request_networks)
+        with open('pages/fl_networks.xml', 'r', encoding="utf-8") as file:
+            req_networks = file.read()
+            categories_xml_list.append(req_networks)
+
+
+
+
+
         with open('fl_parsing.xml', 'w', encoding="utf-8") as file:
             file.write(request_parsing)
         with open('fl_parsing.xml', 'r', encoding="utf-8") as file:

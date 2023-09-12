@@ -26,7 +26,7 @@ architecture_and_interier = 'https://www.fl.ru/rss/all.xml?category=14'
 
 gamedev = 'https://www.fl.ru/rss/all.xml?category=16'
 
-polygraph = 'https://www.fl.ru/rss/all.xml?category=17'
+polygraphy = 'https://www.fl.ru/rss/all.xml?category=17'
 
 animation_and_flash = 'https://www.fl.ru/rss/all.xml?category=19'
 
